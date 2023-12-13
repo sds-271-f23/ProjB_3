@@ -1,0 +1,11 @@
+Write a class that determines the relationship between altitude and temperature. It should:
+
+1. automatically read in the csv when initializing
+2. clean the data appropriately and return a new dataframe *Careful: be aware of units! You may need to create some new columns in your dataframe! Kelvin = Celsius + 273.15*
+3. fit the data to the line $T = - r h + T_0$ where $h$ is Altitude in km and $T$ is temperature in Kelvin
+  
+  Special hint for this part **when you define your fit function inside the class, put ```@staticmethod``` above the function definition** -- this allows ```curve_fit``` to use the fit function without errors. You can read more about static methods [here](https://www.digitalocean.com/community/tutorials/python-static-method) and I'm happy to explain where those errors come from another time!
+ 
+4. calculate (and return) the unknown parameter $r$ with error
+4. calculate (and return) the unknown parameter $T_0$ with error
+6. plot the data and the fit together on the same graph and label it appropriately
